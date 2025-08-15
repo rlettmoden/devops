@@ -41,7 +41,7 @@ namespace twitter
         return Topics();
     }
 
-    std::set<std::string> parseTags(const std::string &text)
+    static std::set<std::string> parseTags(const std::string &text)
     {
         // Create iterator for matches
         std::sregex_iterator iter(text.begin(), text.end(), REGEX_TAG);

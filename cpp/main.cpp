@@ -1,6 +1,6 @@
 #include "twitter_fast_retrieval.h"
 
 int main() { 
-    auto Twitter = Twitter::TwitterFastRetrieval();
+    auto Twitter = twitter::TwitterFastRetrieval();
     return 0; 
 }
