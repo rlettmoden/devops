@@ -1,5 +1,5 @@
 import unittest
-from python.twitter_fast_retrieval import TwitterFastRetrieval, MAX_POST_LENGTH
+from twitter_fast_retrieval import TwitterFastRetrieval, MAX_POST_LENGTH
 from post import parse_tags_from_post
 
 

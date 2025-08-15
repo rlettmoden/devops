@@ -1,6 +1,6 @@
 from typing import List
 
-from python.twitter import Twitter
+from twitter import Twitter
 
 from collections import Counter
 
