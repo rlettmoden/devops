@@ -12,8 +12,10 @@ jobs:
 
     steps:
       # Checkout repository code
-      - name: Checkout code
+      - name: Checkout code (with submodules)
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       # ---- Python Tests ----
       - name: Set up Python
@@ -36,9 +38,6 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential cmake
 
       - name: Configure CMake
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
         working-directory: ./cpp
         run: cmake -B build
 
