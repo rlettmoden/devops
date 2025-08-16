@@ -29,3 +29,20 @@ if(MSVC)
 else()
     target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)
 endif()
+
+# ---------------- Google Test ----------------
+# Add gtest
+add_subdirectory(../third_party/googletest ${CMAKE_BINARY_DIR}/googletest)
+
+enable_testing()
+
+add_executable(tests
+    tests/twitter_test.cpp
+)
+target_link_libraries(tests
+    gtest_main
+    ${HEADERS}            # link the code under test
+)
+
+include(GoogleTest)
+gtest_discover_tests(tests)
