@@ -22,7 +22,7 @@ add_library(twitter_lib
 )
 # Create executable
 add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(twitter_app twitter_lib)
+target_link_libraries(${PROJECT_NAME} twitter_lib)
 
 # ---------------- Google Test ----------------
 # Add gtest
