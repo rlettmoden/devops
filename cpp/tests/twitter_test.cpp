@@ -2,6 +2,6 @@
 #include "../twitter_fast_retrieval.h"
 
 TEST(TwitterFastRetrievalTest, BasicFunctionality) {
-    TwitterFastRetrieval tfr;
+    twitter::TwitterFastRetrieval tfr;
     EXPECT_EQ(0, 0);
 }
